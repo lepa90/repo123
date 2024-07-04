@@ -1,5 +1,9 @@
 pipeline {
-    agent any 
+    pipeline {
+    agent any
+    options {
+        skipStagesAfterUnstable()
+    }
     stages {
         stage('Build') { 
             steps {
@@ -23,7 +27,7 @@ pipeline {
             }
             post {
                 success {
-                    archiveArtifacts 'dist/add2vals'
+                    archiveArtifacts 'dist/'
                 }
             }
         }
