@@ -1,17 +1,11 @@
 import unittest
 import hi
-
-class TestCalc(unittest.TestCase):
-    """
-    Test the add function from the calc library
-    """
-    
-    def test_add_integers(self):
-        """
-        Test that the addition of two integers returns the correct total
-        """
-        print("test")
-        
-
-if __name__ == '__main__':
-    unittest.main()
+class TestBankOperations(unittest.TestCase):
+    def test_insufficient_deposit(self):
+      # Arrange
+      a = hi.BankAccount(1)
+      a.deposit(100)
+      # Act
+      outcome = a.withdraw(200)
+      # Assert
+      self.assertFalse(outcome)
