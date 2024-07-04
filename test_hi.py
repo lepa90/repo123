@@ -9,3 +9,6 @@ class TestBankOperations(unittest.TestCase):
       outcome = a.withdraw(200)
       # Assert
       self.assertFalse(outcome)
+
+if __name__ == '__main__':
+    unittest.main()
