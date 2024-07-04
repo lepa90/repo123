@@ -33,7 +33,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'pyinstaller --onefile hi.py'
+                sh 'pyinstaller --onefile test_hi.py'
             }
             post {
                 success {
